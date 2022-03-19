@@ -1,0 +1,56 @@
+{
+  "errorMsg": "Keys in COLUMNS must be in GROUP or APPLY when TRANSFORMATIONS is present",
+  "title": "courses in GROUP",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "rooms_seats": 90
+              }
+            },
+            {
+              "IS": {
+                "rooms_name": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "rooms_lon": 95
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "cntName",
+        "maxLon"
+      ],
+      "ORDER": "maxLon"
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_dept"
+      ],
+      "APPLY": [
+        {
+          "cntName": {
+            "COUNT": "rooms_name"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

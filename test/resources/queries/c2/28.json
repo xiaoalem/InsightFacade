@@ -1,0 +1,34 @@
+{
+  "errorMsg": "GROUP must be a non-empty array",
+  "title": "one column in apply nothing in group",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "A*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "cntFN"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "cntFN"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [],
+      "APPLY": [
+        {
+          "cntFN": {
+            "COUNT": "rooms_fullname"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

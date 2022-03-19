@@ -1,0 +1,116 @@
+{
+	"title": "two apply",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 200
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_number",
+				"maxSeats",
+				"avgLon"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"maxSeats",
+					"avgLon",
+					"rooms_number"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname",
+				"rooms_number"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"avgLon": {
+						"AVG": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_number": "A",
+			"maxSeats": 442,
+			"avgLon": -123.24
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_number": "100",
+			"maxSeats": 375,
+			"avgLon": -123.25
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_number": "1002",
+			"maxSeats": 350,
+			"avgLon": -123.24
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_number": "1001",
+			"maxSeats": 350,
+			"avgLon": -123.24
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_number": "220C",
+			"maxSeats": 299,
+			"avgLon": -123.25
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_number": "220B",
+			"maxSeats": 299,
+			"avgLon": -123.25
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_number": "220A",
+			"maxSeats": 299,
+			"avgLon": -123.25
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_number": "098",
+			"maxSeats": 260,
+			"avgLon": -123.25
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_number": "1101",
+			"maxSeats": 236,
+			"avgLon": -123.24
+		},
+		{
+			"rooms_shortname": "LSK",
+			"rooms_number": "200",
+			"maxSeats": 205,
+			"avgLon": -123.26
+		}
+	]
+}

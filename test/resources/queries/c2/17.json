@@ -1,0 +1,93 @@
+{
+	"title": "AND has multi objs with One result",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"IS": {
+						"rooms_address": "*Main Mall*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 150
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 187
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"minSeats",
+				"cntType",
+				"maxLon",
+				"avgLat",
+				"sumSeats",
+				"rooms_fullname"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"minSeats",
+					"rooms_type",
+					"rooms_fullname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type",
+				"rooms_fullname"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "rooms_seats"
+					}
+				},
+				{
+					"cntType": {
+						"COUNT": "rooms_type"
+					}
+				},
+				{
+					"maxLon": {
+						"MAX": "rooms_lon"
+					}
+				},
+				{
+					"avgLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 260,
+			"cntType": 1,
+			"maxLon": -123.25364,
+			"avgLat": 49.26,
+			"sumSeats": 260,
+			"rooms_fullname": "Henry Angus"
+		}
+	]
+}

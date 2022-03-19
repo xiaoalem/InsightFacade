@@ -1,0 +1,501 @@
+{
+	"title": "AND has only one item",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_pass": 1000
+							}
+						}
+					]
+				},
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_fail": 100
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_pass",
+				"courses_fail"
+			],
+			"ORDER": "courses_pass"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_pass": 1006,
+			"courses_fail": 213
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1012,
+			"courses_fail": 203
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1018,
+			"courses_fail": 186
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "200",
+			"courses_pass": 1026,
+			"courses_fail": 106
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "100",
+			"courses_pass": 1044,
+			"courses_fail": 106
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1050,
+			"courses_fail": 193
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "100",
+			"courses_pass": 1058,
+			"courses_fail": 120
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "200",
+			"courses_pass": 1062,
+			"courses_fail": 143
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "105",
+			"courses_pass": 1065,
+			"courses_fail": 107
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "233",
+			"courses_pass": 1073,
+			"courses_fail": 129
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "200",
+			"courses_pass": 1084,
+			"courses_fail": 122
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "200",
+			"courses_pass": 1091,
+			"courses_fail": 123
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1114,
+			"courses_fail": 145
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1122,
+			"courses_fail": 222
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "200",
+			"courses_pass": 1133,
+			"courses_fail": 133
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1137,
+			"courses_fail": 190
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1166,
+			"courses_fail": 190
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1215,
+			"courses_fail": 230
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1307,
+			"courses_fail": 162
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1342,
+			"courses_fail": 177
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_pass": 1359,
+			"courses_fail": 157
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "101",
+			"courses_pass": 1383,
+			"courses_fail": 125
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_pass": 1386,
+			"courses_fail": 168
+		},
+		{
+			"courses_dept": "math",
+			"courses_id": "101",
+			"courses_pass": 1390,
+			"courses_fail": 205
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "102",
+			"courses_pass": 1391,
+			"courses_fail": 113
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_pass": 1394,
+			"courses_fail": 112
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1395,
+			"courses_fail": 171
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1419,
+			"courses_fail": 142
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1423,
+			"courses_fail": 171
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "101",
+			"courses_pass": 1438,
+			"courses_fail": 134
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1442,
+			"courses_fail": 116
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "102",
+			"courses_pass": 1442,
+			"courses_fail": 102
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1460,
+			"courses_fail": 162
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1521,
+			"courses_fail": 109
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1526,
+			"courses_fail": 266
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_pass": 1530,
+			"courses_fail": 115
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "123",
+			"courses_pass": 1545,
+			"courses_fail": 121
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1546,
+			"courses_fail": 137
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1551,
+			"courses_fail": 235
+		},
+		{
+			"courses_dept": "phys",
+			"courses_id": "101",
+			"courses_pass": 1558,
+			"courses_fail": 184
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "112",
+			"courses_pass": 1578,
+			"courses_fail": 150
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1586,
+			"courses_fail": 192
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1634,
+			"courses_fail": 260
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1648,
+			"courses_fail": 147
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1667,
+			"courses_fail": 250
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1670,
+			"courses_fail": 116
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1674,
+			"courses_fail": 287
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1699,
+			"courses_fail": 251
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 1705,
+			"courses_fail": 187
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 1705,
+			"courses_fail": 135
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1758,
+			"courses_fail": 136
+		},
+		{
+			"courses_dept": "chem",
+			"courses_id": "121",
+			"courses_pass": 1762,
+			"courses_fail": 264
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1768,
+			"courses_fail": 162
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1780,
+			"courses_fail": 110
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "102",
+			"courses_pass": 1785,
+			"courses_fail": 146
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 1787,
+			"courses_fail": 187
+		},
+		{
+			"courses_dept": "biol",
+			"courses_id": "121",
+			"courses_pass": 1817,
+			"courses_fail": 131
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 1827,
+			"courses_fail": 135
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 1866,
+			"courses_fail": 142
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 1948,
+			"courses_fail": 120
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "101",
+			"courses_pass": 1953,
+			"courses_fail": 169
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 1962,
+			"courses_fail": 181
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "101",
+			"courses_pass": 1966,
+			"courses_fail": 175
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 2019,
+			"courses_fail": 145
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2023,
+			"courses_fail": 145
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2063,
+			"courses_fail": 172
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 2083,
+			"courses_fail": 119
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "102",
+			"courses_pass": 2095,
+			"courses_fail": 144
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2124,
+			"courses_fail": 221
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 2134,
+			"courses_fail": 142
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "102",
+			"courses_pass": 2169,
+			"courses_fail": 166
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "101",
+			"courses_pass": 2201,
+			"courses_fail": 172
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2278,
+			"courses_fail": 149
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2286,
+			"courses_fail": 126
+		},
+		{
+			"courses_dept": "psyc",
+			"courses_id": "102",
+			"courses_pass": 2289,
+			"courses_fail": 135
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2378,
+			"courses_fail": 132
+		},
+		{
+			"courses_dept": "econ",
+			"courses_id": "101",
+			"courses_pass": 2438,
+			"courses_fail": 135
+		}
+	]
+}

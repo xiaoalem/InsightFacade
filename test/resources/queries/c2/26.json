@@ -1,0 +1,60 @@
+{
+  "errorMsg": "Invalid key lalala in COLUMNS",
+  "title": "invalid lalala",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "A*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "minSeats",
+        "cntType",
+        "maxLon",
+        "lalala",
+        "sumSeats",
+        "rooms_fullname",
+        "courses_href"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "minSeats",
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_fullname",
+        "courses_href",
+        "lalala"
+      ],
+      "APPLY": [
+        {
+          "minSeats": {
+            "MIN": "rooms_seats"
+          }
+        },
+        {
+          "cntType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "sumSeats": {
+            "SUM": "rooms_seats"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

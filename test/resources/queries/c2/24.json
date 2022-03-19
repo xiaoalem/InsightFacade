@@ -1,0 +1,210 @@
+{
+  "title": "groupby number seats",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "Buchanan"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "minSeats",
+        "cntType",
+        "maxLon",
+        "avgLat",
+        "rooms_seats",
+        "rooms_fullname"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "minSeats",
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_fullname",
+        "rooms_seats"
+      ],
+      "APPLY": [
+        {
+          "minSeats": {
+            "MIN": "rooms_seats"
+          }
+        },
+        {
+          "cntType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "avgLat": {
+            "AVG": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "minSeats": 275,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 275,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 181,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 181,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 150,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 150,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 131,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 131,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 108,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 108,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 78,
+      "cntType": 2,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 78,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 65,
+      "cntType": 2,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 65,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 56,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 56,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 50,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 50,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 48,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 48,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 42,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 42,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 40,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 40,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 32,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 32,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 31,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 31,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 30,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 30,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 26,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 26,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 24,
+      "cntType": 2,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 24,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 22,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 22,
+      "rooms_fullname": "Buchanan"
+    },
+    {
+      "minSeats": 18,
+      "cntType": 1,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "rooms_seats": 18,
+      "rooms_fullname": "Buchanan"
+    }
+  ]
+}

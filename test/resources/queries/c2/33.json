@@ -1,0 +1,152 @@
+{
+  "title": "rooms_name *A",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_name": "*A"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "cntSeats",
+        "cntType",
+        "cntLon",
+        "cntFullname",
+        "cntShortname",
+        "cntNumber",
+        "cntAdr",
+        "cntFurniture",
+        "cntLat",
+        "rooms_name",
+        "rooms_href"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_href"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_href",
+        "rooms_name"
+      ],
+      "APPLY": [
+        {
+          "cntSeats": {
+            "COUNT": "rooms_seats"
+          }
+        },
+        {
+          "cntType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "cntLon": {
+            "COUNT": "rooms_lon"
+          }
+        },
+        {
+          "cntNumber": {
+            "COUNT": "rooms_number"
+          }
+        },
+        {
+          "cntFullname": {
+            "COUNT": "rooms_fullname"
+          }
+        },
+        {
+          "cntShortname": {
+            "COUNT": "rooms_shortname"
+          }
+        },
+        {
+          "cntAdr": {
+            "COUNT": "rooms_address"
+          }
+        },
+        {
+          "cntFurniture": {
+            "COUNT": "rooms_furniture"
+          }
+        },
+        {
+          "cntLat": {
+            "COUNT": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "cntSeats": 1,
+      "cntType": 1,
+      "cntLon": 1,
+      "cntFullname": 1,
+      "cntShortname": 1,
+      "cntNumber": 1,
+      "cntAdr": 1,
+      "cntFurniture": 1,
+      "cntLat": 1,
+      "rooms_name": "SRC_220A",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SRC-220A"
+    },
+    {
+      "cntSeats": 1,
+      "cntType": 1,
+      "cntLon": 1,
+      "cntFullname": 1,
+      "cntShortname": 1,
+      "cntNumber": 1,
+      "cntAdr": 1,
+      "cntFurniture": 1,
+      "cntLat": 1,
+      "rooms_name": "SCRF_204A",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SCRF-204A"
+    },
+    {
+      "cntSeats": 1,
+      "cntType": 1,
+      "cntLon": 1,
+      "cntFullname": 1,
+      "cntShortname": 1,
+      "cntNumber": 1,
+      "cntAdr": 1,
+      "cntFurniture": 1,
+      "cntLat": 1,
+      "rooms_name": "OSBO_A",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-A"
+    },
+    {
+      "cntSeats": 1,
+      "cntType": 1,
+      "cntLon": 1,
+      "cntFullname": 1,
+      "cntShortname": 1,
+      "cntNumber": 1,
+      "cntAdr": 1,
+      "cntFurniture": 1,
+      "cntLat": 1,
+      "rooms_name": "OSBO_203A",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-203A"
+    },
+    {
+      "cntSeats": 1,
+      "cntType": 1,
+      "cntLon": 1,
+      "cntFullname": 1,
+      "cntShortname": 1,
+      "cntNumber": 1,
+      "cntAdr": 1,
+      "cntFurniture": 1,
+      "cntLat": 1,
+      "rooms_name": "MCML_360A",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/MCML-360A"
+    }
+  ]
+}

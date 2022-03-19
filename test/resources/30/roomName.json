@@ -1,0 +1,244 @@
+{
+  "title": "roomName",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_name": "A*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_name",
+        "maxLon",
+        "sumSeats"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_name",
+          "sumSeats"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_name"
+      ],
+      "APPLY": [
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "sumSeats": {
+            "SUM": "rooms_seats"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_name": "AUDX_157",
+      "maxLon": -123.25655,
+      "sumSeats": 21
+    },
+    {
+      "rooms_name": "AUDX_142",
+      "maxLon": -123.25655,
+      "sumSeats": 20
+    },
+    {
+      "rooms_name": "ANSO_207",
+      "maxLon": -123.25741,
+      "sumSeats": 90
+    },
+    {
+      "rooms_name": "ANSO_205",
+      "maxLon": -123.25741,
+      "sumSeats": 37
+    },
+    {
+      "rooms_name": "ANSO_203",
+      "maxLon": -123.25741,
+      "sumSeats": 33
+    },
+    {
+      "rooms_name": "ANSO_202",
+      "maxLon": -123.25741,
+      "sumSeats": 26
+    },
+    {
+      "rooms_name": "ANGU_437",
+      "maxLon": -123.25364,
+      "sumSeats": 32
+    },
+    {
+      "rooms_name": "ANGU_435",
+      "maxLon": -123.25364,
+      "sumSeats": 53
+    },
+    {
+      "rooms_name": "ANGU_434",
+      "maxLon": -123.25364,
+      "sumSeats": 44
+    },
+    {
+      "rooms_name": "ANGU_432",
+      "maxLon": -123.25364,
+      "sumSeats": 16
+    },
+    {
+      "rooms_name": "ANGU_354",
+      "maxLon": -123.25364,
+      "sumSeats": 44
+    },
+    {
+      "rooms_name": "ANGU_350",
+      "maxLon": -123.25364,
+      "sumSeats": 58
+    },
+    {
+      "rooms_name": "ANGU_347",
+      "maxLon": -123.25364,
+      "sumSeats": 70
+    },
+    {
+      "rooms_name": "ANGU_345",
+      "maxLon": -123.25364,
+      "sumSeats": 68
+    },
+    {
+      "rooms_name": "ANGU_343",
+      "maxLon": -123.25364,
+      "sumSeats": 68
+    },
+    {
+      "rooms_name": "ANGU_339",
+      "maxLon": -123.25364,
+      "sumSeats": 20
+    },
+    {
+      "rooms_name": "ANGU_335",
+      "maxLon": -123.25364,
+      "sumSeats": 41
+    },
+    {
+      "rooms_name": "ANGU_334",
+      "maxLon": -123.25364,
+      "sumSeats": 60
+    },
+    {
+      "rooms_name": "ANGU_332",
+      "maxLon": -123.25364,
+      "sumSeats": 16
+    },
+    {
+      "rooms_name": "ANGU_296",
+      "maxLon": -123.25364,
+      "sumSeats": 37
+    },
+    {
+      "rooms_name": "ANGU_295",
+      "maxLon": -123.25364,
+      "sumSeats": 54
+    },
+    {
+      "rooms_name": "ANGU_293",
+      "maxLon": -123.25364,
+      "sumSeats": 32
+    },
+    {
+      "rooms_name": "ANGU_292",
+      "maxLon": -123.25364,
+      "sumSeats": 35
+    },
+    {
+      "rooms_name": "ANGU_291",
+      "maxLon": -123.25364,
+      "sumSeats": 54
+    },
+    {
+      "rooms_name": "ANGU_254",
+      "maxLon": -123.25364,
+      "sumSeats": 80
+    },
+    {
+      "rooms_name": "ANGU_243",
+      "maxLon": -123.25364,
+      "sumSeats": 68
+    },
+    {
+      "rooms_name": "ANGU_241",
+      "maxLon": -123.25364,
+      "sumSeats": 70
+    },
+    {
+      "rooms_name": "ANGU_237",
+      "maxLon": -123.25364,
+      "sumSeats": 41
+    },
+    {
+      "rooms_name": "ANGU_235",
+      "maxLon": -123.25364,
+      "sumSeats": 41
+    },
+    {
+      "rooms_name": "ANGU_234",
+      "maxLon": -123.25364,
+      "sumSeats": 60
+    },
+    {
+      "rooms_name": "ANGU_232",
+      "maxLon": -123.25364,
+      "sumSeats": 16
+    },
+    {
+      "rooms_name": "ANGU_098",
+      "maxLon": -123.25364,
+      "sumSeats": 260
+    },
+    {
+      "rooms_name": "ANGU_039",
+      "maxLon": -123.25364,
+      "sumSeats": 54
+    },
+    {
+      "rooms_name": "ANGU_037",
+      "maxLon": -123.25364,
+      "sumSeats": 54
+    },
+    {
+      "rooms_name": "ALRD_B101",
+      "maxLon": -123.25318,
+      "sumSeats": 44
+    },
+    {
+      "rooms_name": "ALRD_121",
+      "maxLon": -123.25318,
+      "sumSeats": 50
+    },
+    {
+      "rooms_name": "ALRD_113",
+      "maxLon": -123.25318,
+      "sumSeats": 20
+    },
+    {
+      "rooms_name": "ALRD_112",
+      "maxLon": -123.25318,
+      "sumSeats": 20
+    },
+    {
+      "rooms_name": "ALRD_105",
+      "maxLon": -123.25318,
+      "sumSeats": 94
+    },
+    {
+      "rooms_name": "AERL_120",
+      "maxLon": -123.25099,
+      "sumSeats": 144
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "AND must be a non-empty array",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_pass": 1000
+              }
+            }
+          ]
+        },
+        {
+          "AND": []
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_pass",
+        "courses_fail"
+      ],
+      "ORDER": "courses_pass"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

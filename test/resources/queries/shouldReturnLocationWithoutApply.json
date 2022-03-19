@@ -1,0 +1,30 @@
+{
+  "title": "should return location without apply",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "Hebb"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_lat",
+        "rooms_lon"
+      ]
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_lat",
+        "rooms_lon"
+      ],
+      "APPLY": []
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_lat": 49.2661,
+      "rooms_lon": -123.25165
+    }
+  ]
+}

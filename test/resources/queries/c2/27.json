@@ -1,0 +1,42 @@
+{
+  "title": "one column in group nothing in apply",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "A*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_fullname"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_fullname"
+      ],
+      "APPLY": []
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_fullname": "Auditorium Annex"
+    },
+    {
+      "rooms_fullname": "Aquatic Ecosystems Research Laboratory"
+    },
+    {
+      "rooms_fullname": "Anthropology and Sociology"
+    },
+    {
+      "rooms_fullname": "Allard Hall (LAW)"
+    }
+  ]
+}

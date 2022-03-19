@@ -1,0 +1,48 @@
+{
+  "title": "ValidRoomLTEdgeCase",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "LT": {
+            "rooms_seats": 7
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "rooms_type",
+        "rooms_lon",
+        "rooms_lat",
+        "rooms_seats"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_seats",
+          "rooms_type",
+          "rooms_shortname"
+        ]
+      }
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_shortname": "MCML",
+      "rooms_type": "Small Group",
+      "rooms_lon": -123.25027,
+      "rooms_lat": 49.26114,
+      "rooms_seats": 6
+    },
+    {
+      "rooms_shortname": "MCML",
+      "rooms_type": "Small Group",
+      "rooms_lon": -123.25027,
+      "rooms_lat": 49.26114,
+      "rooms_seats": 6
+    }
+  ]
+}

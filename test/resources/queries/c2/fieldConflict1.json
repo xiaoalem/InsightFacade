@@ -1,0 +1,29 @@
+{
+  "errorMsg": "Invalid value type in GT, should be number",
+  "title": "fieldConflict1",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": "95"
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "CPSC"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

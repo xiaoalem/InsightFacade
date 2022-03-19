@@ -1,0 +1,582 @@
+{
+	"title": "",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"OR": [
+					{
+						"NOT": {
+							"IS": {
+								"rooms_type": "*Group*"
+							}
+						}
+					},
+					{
+						"EQ": {
+							"rooms_lon": 200
+						}
+					}
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"minSeats",
+				"cntType",
+				"maxLon",
+				"avgLat",
+				"sumSeats",
+				"rooms_fullname"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"minSeats",
+					"rooms_type",
+					"rooms_fullname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type",
+				"rooms_fullname"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "rooms_seats"
+					}
+				},
+				{
+					"cntType": {
+						"COUNT": "rooms_type"
+					}
+				},
+				{
+					"maxLon": {
+						"MAX": "rooms_lon"
+					}
+				},
+				{
+					"avgLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 426,
+			"cntType": 1,
+			"maxLon": -123.25314,
+			"avgLat": 49.26,
+			"sumSeats": 426,
+			"rooms_fullname": "Centre for Interactive  Research on Sustainability"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 375,
+			"cntType": 1,
+			"maxLon": -123.25165,
+			"avgLat": 49.27,
+			"sumSeats": 375,
+			"rooms_fullname": "Hebb"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 280,
+			"cntType": 1,
+			"maxLon": -123.2531,
+			"avgLat": 49.26,
+			"sumSeats": 280,
+			"rooms_fullname": "Neville Scarfe"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 225,
+			"cntType": 1,
+			"maxLon": -123.25623,
+			"avgLat": 49.27,
+			"sumSeats": 225,
+			"rooms_fullname": "Geography"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 224,
+			"cntType": 1,
+			"maxLon": -123.255534,
+			"avgLat": 49.27,
+			"sumSeats": 224,
+			"rooms_fullname": "Mathematics"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 187,
+			"cntType": 1,
+			"maxLon": -123.25431,
+			"avgLat": 49.26,
+			"sumSeats": 755,
+			"rooms_fullname": "West Mall Swing Space"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 183,
+			"cntType": 1,
+			"maxLon": -123.25533,
+			"avgLat": 49.27,
+			"sumSeats": 388,
+			"rooms_fullname": "Leonard S. Klinck (also known as CSCI)"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 167,
+			"cntType": 1,
+			"maxLon": -123.24342,
+			"avgLat": 49.26,
+			"sumSeats": 403,
+			"rooms_fullname": "Pharmaceutical Sciences Building"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 160,
+			"cntType": 1,
+			"maxLon": -123.24608,
+			"avgLat": 49.27,
+			"sumSeats": 160,
+			"rooms_fullname": "Friedman Building"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 154,
+			"cntType": 1,
+			"maxLon": -123.2521,
+			"avgLat": 49.27,
+			"sumSeats": 154,
+			"rooms_fullname": "Irving K Barber Learning Centre"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 150,
+			"cntType": 1,
+			"maxLon": -123.25374,
+			"avgLat": 49.27,
+			"sumSeats": 562,
+			"rooms_fullname": "Hennings"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 144,
+			"cntType": 1,
+			"maxLon": -123.25099,
+			"avgLat": 49.26,
+			"sumSeats": 144,
+			"rooms_fullname": "Aquatic Ecosystems Research Laboratory"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 125,
+			"cntType": 1,
+			"maxLon": -123.24494,
+			"avgLat": 49.26,
+			"sumSeats": 825,
+			"rooms_fullname": "Life Sciences Centre"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 123,
+			"cntType": 1,
+			"maxLon": -123.24935,
+			"avgLat": 49.26,
+			"sumSeats": 259,
+			"rooms_fullname": "MacLeod"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 106,
+			"cntType": 1,
+			"maxLon": -123.254816,
+			"avgLat": 49.27,
+			"sumSeats": 106,
+			"rooms_fullname": "Mathematics Annex"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 102,
+			"cntType": 1,
+			"maxLon": -123.24937,
+			"avgLat": 49.27,
+			"sumSeats": 427,
+			"rooms_fullname": "Wesbrook"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 100,
+			"cntType": 1,
+			"maxLon": -123.24894,
+			"avgLat": 49.26,
+			"sumSeats": 100,
+			"rooms_fullname": "Civil and Mechanical Engineering"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 99,
+			"cntType": 1,
+			"maxLon": -123.24886,
+			"avgLat": 49.26,
+			"sumSeats": 349,
+			"rooms_fullname": "Forest Sciences Centre"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 99,
+			"cntType": 1,
+			"maxLon": -123.24959,
+			"avgLat": 49.26,
+			"sumSeats": 99,
+			"rooms_fullname": "Food, Nutrition and Health"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 94,
+			"cntType": 1,
+			"maxLon": -123.24718,
+			"avgLat": 49.26,
+			"sumSeats": 294,
+			"rooms_fullname": "Chemical and Biological Engineering Building"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 90,
+			"cntType": 1,
+			"maxLon": -123.25308,
+			"avgLat": 49.27,
+			"sumSeats": 913,
+			"rooms_fullname": "Chemistry"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 88,
+			"cntType": 1,
+			"maxLon": -123.24673,
+			"avgLat": 49.26,
+			"sumSeats": 1132,
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 80,
+			"cntType": 1,
+			"maxLon": -123.24807,
+			"avgLat": 49.26,
+			"sumSeats": 360,
+			"rooms_fullname": "Hugh Dempster Pavilion"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 80,
+			"cntType": 1,
+			"maxLon": -123.25583,
+			"avgLat": 49.27,
+			"sumSeats": 174,
+			"rooms_fullname": "Frederic Lasserre"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 80,
+			"cntType": 1,
+			"maxLon": -123.25224,
+			"avgLat": 49.26,
+			"sumSeats": 580,
+			"rooms_fullname": "Earth Sciences Building"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 76,
+			"cntType": 1,
+			"maxLon": -123.25249,
+			"avgLat": 49.26,
+			"sumSeats": 304,
+			"rooms_fullname": "Biological Sciences"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 74,
+			"cntType": 1,
+			"maxLon": -123.25027,
+			"avgLat": 49.26,
+			"sumSeats": 274,
+			"rooms_fullname": "MacMillan"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 70,
+			"cntType": 1,
+			"maxLon": -123.25237,
+			"avgLat": 49.27,
+			"sumSeats": 70,
+			"rooms_fullname": "Brock Hall Annex"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 65,
+			"cntType": 1,
+			"maxLon": -123.25468,
+			"avgLat": 49.27,
+			"sumSeats": 1238,
+			"rooms_fullname": "Buchanan"
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"minSeats": 44,
+			"cntType": 1,
+			"maxLon": -123.25364,
+			"avgLat": 49.26,
+			"sumSeats": 706,
+			"rooms_fullname": "Henry Angus"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 40,
+			"cntType": 1,
+			"maxLon": -123.24935,
+			"avgLat": 49.26,
+			"sumSeats": 40,
+			"rooms_fullname": "MacLeod"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 40,
+			"cntType": 1,
+			"maxLon": -123.24807,
+			"avgLat": 49.26,
+			"sumSeats": 80,
+			"rooms_fullname": "Hugh Dempster Pavilion"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 39,
+			"cntType": 1,
+			"maxLon": -123.24467,
+			"avgLat": 49.26,
+			"sumSeats": 79,
+			"rooms_fullname": "Robert F. Osborne Centre"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 35,
+			"cntType": 1,
+			"maxLon": -123.25179,
+			"avgLat": 49.26,
+			"sumSeats": 79,
+			"rooms_fullname": "Frank Forward"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 30,
+			"cntType": 1,
+			"maxLon": -123.25692,
+			"avgLat": 49.27,
+			"sumSeats": 30,
+			"rooms_fullname": "The Leon and Thea Koerner University Centre"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 30,
+			"cntType": 1,
+			"maxLon": -123.25374,
+			"avgLat": 49.27,
+			"sumSeats": 96,
+			"rooms_fullname": "Hennings"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 27,
+			"cntType": 1,
+			"maxLon": -123.25431,
+			"avgLat": 49.26,
+			"sumSeats": 243,
+			"rooms_fullname": "West Mall Swing Space"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 26,
+			"cntType": 1,
+			"maxLon": -123.25741,
+			"avgLat": 49.27,
+			"sumSeats": 96,
+			"rooms_fullname": "Anthropology and Sociology"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 25,
+			"cntType": 1,
+			"maxLon": -123.255534,
+			"avgLat": 49.27,
+			"sumSeats": 115,
+			"rooms_fullname": "Mathematics"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 24,
+			"cntType": 1,
+			"maxLon": -123.2559,
+			"avgLat": 49.26,
+			"sumSeats": 120,
+			"rooms_fullname": "Ponderosa Commons: Oak House"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 22,
+			"cntType": 1,
+			"maxLon": -123.24894,
+			"avgLat": 49.26,
+			"sumSeats": 48,
+			"rooms_fullname": "Civil and Mechanical Engineering"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 21,
+			"cntType": 1,
+			"maxLon": -123.25623,
+			"avgLat": 49.27,
+			"sumSeats": 60,
+			"rooms_fullname": "Geography"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 20,
+			"cntType": 1,
+			"maxLon": -123.2531,
+			"avgLat": 49.26,
+			"sumSeats": 724,
+			"rooms_fullname": "Neville Scarfe"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 20,
+			"cntType": 1,
+			"maxLon": -123.25583,
+			"avgLat": 49.27,
+			"sumSeats": 40,
+			"rooms_fullname": "Frederic Lasserre"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 20,
+			"cntType": 1,
+			"maxLon": -123.25655,
+			"avgLat": 49.27,
+			"sumSeats": 41,
+			"rooms_fullname": "Auditorium Annex"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 18,
+			"cntType": 1,
+			"maxLon": -123.24886,
+			"avgLat": 49.26,
+			"sumSeats": 142,
+			"rooms_fullname": "Forest Sciences Centre"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 18,
+			"cntType": 1,
+			"maxLon": -123.25468,
+			"avgLat": 49.27,
+			"sumSeats": 729,
+			"rooms_fullname": "Buchanan"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 16,
+			"cntType": 1,
+			"maxLon": -123.25364,
+			"avgLat": 49.26,
+			"sumSeats": 87,
+			"rooms_fullname": "Henry Angus"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 16,
+			"cntType": 1,
+			"maxLon": -123.25249,
+			"avgLat": 49.26,
+			"sumSeats": 32,
+			"rooms_fullname": "Biological Sciences"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 12,
+			"cntType": 1,
+			"maxLon": -123.24842,
+			"avgLat": 49.26,
+			"sumSeats": 100,
+			"rooms_fullname": "School of Population and Public Health"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 12,
+			"cntType": 1,
+			"maxLon": -123.25505,
+			"avgLat": 49.26,
+			"sumSeats": 44,
+			"rooms_fullname": "Jack Bell Building for the School of Social Work"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 12,
+			"cntType": 1,
+			"maxLon": -123.24959,
+			"avgLat": 49.26,
+			"sumSeats": 67,
+			"rooms_fullname": "Food, Nutrition and Health"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 10,
+			"cntType": 1,
+			"maxLon": -123.24673,
+			"avgLat": 49.26,
+			"sumSeats": 165,
+			"rooms_fullname": "Woodward (Instructional Resources Centre-IRC)"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 8,
+			"cntType": 1,
+			"maxLon": -123.2521,
+			"avgLat": 49.27,
+			"sumSeats": 252,
+			"rooms_fullname": "Irving K Barber Learning Centre"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 7,
+			"cntType": 1,
+			"maxLon": -123.24342,
+			"avgLat": 49.26,
+			"sumSeats": 63,
+			"rooms_fullname": "Pharmaceutical Sciences Building"
+		},
+		{
+			"rooms_type": "Small Group",
+			"minSeats": 6,
+			"cntType": 1,
+			"maxLon": -123.25027,
+			"avgLat": 49.26,
+			"sumSeats": 180,
+			"rooms_fullname": "MacMillan"
+		}
+	]
+}

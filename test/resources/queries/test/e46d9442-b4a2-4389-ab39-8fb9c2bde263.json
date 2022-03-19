@@ -1,0 +1,56 @@
+{
+  "errorMsg": "Cannot query more than one dataset",
+  "title": "",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "rooms_seats": 90
+              }
+            },
+            {
+              "IS": {
+                "rooms_name": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "rooms_lon": 95
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_name",
+        "cntName",
+        "maxLon"
+      ],
+      "ORDER": "cntName"
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_name"
+      ],
+      "APPLY": [
+        {
+          "cntName": {
+            "COUNT": "courses_name"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

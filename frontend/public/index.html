@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>310 Frontend</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body id="body">
+		<div id="title" class="title">I KNOW IT ALL</div>
+		<div class="option">
+			<button id="room" class="button" >I am a Professor!</button>
+			<button id="course" class="button" >I am a Student!</button>
+		</div>
+		<div id="inputCourse" style="display: none">
+			<div id="student" class="text">
+				You must be interested in some course average! Go check it out!
+			</div>
+			<div class="Input">
+				<hr>Which department offers it?</hr>
+				<select id="dept" onchange="handleChooseDept()"></select>
+				<hr>And its ID is?</hr>
+				<select id="section"></select>
+				<hr>Start from?</hr>
+				<input id="yearStart" type="number" min="1900" max="2021" value="2000">
+				<hr>End at?</hr>
+				<input id="yearEnd" type="number" min="1900" max="2021" value="2021">
+			</div>
+			<button id="submitCourse" class="button">Submit</button>
+			<p id="result" class="text" style="display: none"></p>
+			<p id="avgNotFound" style="display: none">
+				Oops... No average of your selected course found for this period.
+			</p>
+		</div>
+
+		<div id="inputRoom" style="display: none">
+			<div id="professor" class="text">
+				Are you wondering where you should teach your next class? Go check it out!
+			</div>
+			<div class="Input">
+				<hr>Where you at?</hr>
+				<select id="building">
+					<option>Choose from below</option>
+				</select>
+				<hr>How many students are registered?</hr>
+				<input id="capacity" type="number" min="0" max="500" value="0">
+				<hr>What type of furniture do you want?</hr>
+				<select id="furniture">
+					<option value="*">Choose from below</option>
+				</select>
+			</div>
+			<button id="submitRoom" class="button">Submit</button>
+			<table class="roomTable" id="roomTable" style="display: none">
+				<tr>
+					<th>Distance From You (m)</th>
+					<th>Building</th>
+					<th>Room ID</th>
+					<th>Seats</th>
+					<th>Furniture</th>
+					<th>Address</th>
+					<th>Website</th>
+				</tr>
+				<tbody id="table"></tbody>
+			</table>
+			<p id="roomNotFound" style="display: none">
+				Oops... No such room found, please modify your search criteria.
+			</p>
+		</div>
+		<script type="text/javascript" src="/frontend.js"></script>
+	</body>
+	<div id="overlay" class="overlay" style="display: block">
+		<img src="Ripple-1s-200px.gif" class="loading">
+	</div>
+</html>

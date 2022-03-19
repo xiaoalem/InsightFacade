@@ -1,0 +1,29 @@
+{
+  "errorMsg": "Asterisks (*) can only be the first or last characters of input strings",
+  "title": "wildcards3",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 95
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "*p*sc*"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

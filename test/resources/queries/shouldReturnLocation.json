@@ -1,0 +1,41 @@
+{
+  "title": "should return location",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "Hebb"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "lat",
+        "lon"
+      ]
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_lat",
+        "rooms_lon"
+      ],
+      "APPLY": [
+        {
+          "lat": {
+            "AVG": "rooms_lat"
+          }
+        },
+        {
+          "lon": {
+            "AVG": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "lat": 49.27,
+      "lon": -123.25
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "errorMsg": "The result is too big. Only queries with a maximum of 5000 results are supported.",
+  "title": "long result even with GROUP",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_instructor"
+      ],
+      "ORDER": "courses_instructor"
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_instructor"
+      ],
+      "APPLY": []
+    }
+  },
+  "errorExpected": true,
+  "with": "ResultTooLargeError"
+}

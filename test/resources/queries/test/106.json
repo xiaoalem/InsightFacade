@@ -1,0 +1,38 @@
+{
+  "errorMsg": "The result is too big. Only queries with a maximum of 5000 results are supported.",
+  "title": "IS with inputString = \"\"",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_instructor": ""
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_year": 2000
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_year",
+        "courses_id",
+        "courses_instructor"
+      ],
+      "ORDER": "courses_id"
+    }
+  },
+  "errorExpected": true,
+  "with": "ResultTooLargeError"
+}

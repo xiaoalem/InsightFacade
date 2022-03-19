@@ -1,0 +1,38 @@
+{
+	"errorMsg": "Cannot query more than one dataset",
+	"title": "invalid key",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"IS": {
+								"_year": 2018
+							}
+						}
+					]
+				},
+				{
+					"AND": [
+						{
+							"GT": {
+								"_uuid": "2017"
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_uuid"
+			],
+			"ORDER": "courses_dept"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

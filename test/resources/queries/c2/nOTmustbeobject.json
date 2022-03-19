@@ -1,0 +1,34 @@
+{
+  "errorMsg": "NOT must be object",
+  "title": "NOTmustbeobject",
+  "input": {
+    "WHERE": {
+      "NOT": [
+        {
+          "LT": {
+            "rooms_seats": 6
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "rooms_type",
+        "rooms_lon",
+        "rooms_lat",
+        "rooms_seats"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_seats",
+          "rooms_type",
+          "rooms_shortname"
+        ]
+      }
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,87 @@
+{
+  "title": "output is empty",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "OR": [
+            {
+              "IS": {
+                "rooms_furniture": "*Tables*"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "rooms_lon": 200
+          }
+        },
+        {
+          "GT": {
+            "rooms_lon": 150
+          }
+        },
+        {
+          "LT": {
+            "rooms_lon": 187
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_type",
+        "rooms_fullname",
+        "minLat",
+        "cntLat",
+        "maxLat",
+        "avgLat",
+        "sumLat"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "minLat",
+          "rooms_type",
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_type",
+        "rooms_fullname"
+      ],
+      "APPLY": [
+        {
+          "minLat": {
+            "MIN": "rooms_lat"
+          }
+        },
+        {
+          "cntLat": {
+            "COUNT": "rooms_lat"
+          }
+        },
+        {
+          "maxLat": {
+            "MAX": "rooms_lat"
+          }
+        },
+        {
+          "avgLat": {
+            "AVG": "rooms_lat"
+          }
+        },
+        {
+          "sumLat": {
+            "SUM": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": []
+}

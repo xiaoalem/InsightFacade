@@ -1,0 +1,39 @@
+{
+	"errorMsg": "Invalid key type in GT",
+	"title": "GT with uuid = string",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"GT": {
+								"courses_uuid": 1000
+							}
+						}
+					]
+				},
+				{
+					"AND": [
+						{
+							"EQ": {
+								"courses_uuid": 1000
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_pass",
+				"courses_fail"
+			],
+			"ORDER": "courses_pass"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

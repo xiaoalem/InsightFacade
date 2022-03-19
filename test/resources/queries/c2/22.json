@@ -1,0 +1,75 @@
+{
+	"title": "no order no trans",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"GT": {
+						"rooms_seats": 349
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_type",
+				"rooms_lon",
+				"rooms_lat",
+				"rooms_seats"
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_shortname": "CIRS",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25314,
+			"rooms_lat": 49.26207,
+			"rooms_seats": 426
+		},
+		{
+			"rooms_shortname": "ESB",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25224,
+			"rooms_lat": 49.26274,
+			"rooms_seats": 350
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25165,
+			"rooms_lat": 49.2661,
+			"rooms_seats": 375
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24494,
+			"rooms_lat": 49.26236,
+			"rooms_seats": 350
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24494,
+			"rooms_lat": 49.26236,
+			"rooms_seats": 350
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Open Design General Purpose",
+			"rooms_lon": -123.24467,
+			"rooms_lat": 49.26047,
+			"rooms_seats": 442
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24673,
+			"rooms_lat": 49.26478,
+			"rooms_seats": 503
+		}
+	]
+}

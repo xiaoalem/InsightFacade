@@ -1,0 +1,29 @@
+{
+  "errorMsg": "Invalid value type in IS, should be string",
+  "title": "fieldConflict2",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 95
+          }
+        },
+        {
+          "IS": {
+            "courses_id": 210
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,45 @@
+{
+  "title": "wildcards2",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 95
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "*psc*"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "courses_dept": "apsc",
+      "courses_avg": 95.05
+    },
+    {
+      "courses_dept": "apsc",
+      "courses_avg": 95.94
+    },
+    {
+      "courses_dept": "apsc",
+      "courses_avg": 95.95
+    },
+    {
+      "courses_dept": "apsc",
+      "courses_avg": 96
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "errorMsg": "Excess keys in query",
+  "title": "weird",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "maxAvg"
+      ],
+      "ORDER": "courses_avg"
+    },
+    "TRANSFORMATION": {
+      "GROUP": [
+        "courses_dept",
+        "courses_id"
+      ],
+      "APPLY": [
+        {
+          "maxAvg": {
+            "MAX": "courses_avg"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

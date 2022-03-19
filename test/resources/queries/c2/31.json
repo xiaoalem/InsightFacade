@@ -1,0 +1,607 @@
+{
+	"title": "rooms_name A*",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_name": "A*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"cntSeats",
+				"cntType",
+				"cntLon",
+				"cntFullname",
+				"cntShortname",
+				"cntNumber",
+				"cntAdr",
+				"cntFurniture",
+				"cntLat",
+				"rooms_name",
+				"rooms_href"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"rooms_href"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_href",
+				"rooms_name"
+			],
+			"APPLY": [
+				{
+					"cntSeats": {
+						"COUNT": "rooms_seats"
+					}
+				},
+				{
+					"cntType": {
+						"COUNT": "rooms_type"
+					}
+				},
+				{
+					"cntLon": {
+						"COUNT": "rooms_lon"
+					}
+				},
+				{
+					"cntNumber": {
+						"COUNT": "rooms_number"
+					}
+				},
+				{
+					"cntFullname": {
+						"COUNT": "rooms_fullname"
+					}
+				},
+				{
+					"cntShortname": {
+						"COUNT": "rooms_shortname"
+					}
+				},
+				{
+					"cntAdr": {
+						"COUNT": "rooms_address"
+					}
+				},
+				{
+					"cntFurniture": {
+						"COUNT": "rooms_furniture"
+					}
+				},
+				{
+					"cntLat": {
+						"COUNT": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "AUDX_157",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/AUDX-157"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "AUDX_142",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/AUDX-142"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANSO_207",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-207"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANSO_205",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-205"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANSO_203",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-203"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANSO_202",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANSO-202"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_437",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-437"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_435",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-435"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_434",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-434"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_432",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-432"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_354",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-354"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_350",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-350"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_347",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-347"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_345",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-345"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_343",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-343"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_339",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-339"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_335",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-335"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_334",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-334"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_332",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-332"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_296",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-296"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_295",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-295"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_293",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-293"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_292",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-292"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_291",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-291"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_254",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-254"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_243",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-243"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_241",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-241"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_237",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-237"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_235",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-235"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_234",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-234"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_232",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-232"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_098",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-098"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_039",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-039"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ANGU_037",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ANGU-037"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ALRD_B101",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-B101"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ALRD_121",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-121"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ALRD_113",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-113"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ALRD_112",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-112"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "ALRD_105",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-105"
+		},
+		{
+			"cntSeats": 1,
+			"cntType": 1,
+			"cntLon": 1,
+			"cntFullname": 1,
+			"cntShortname": 1,
+			"cntNumber": 1,
+			"cntAdr": 1,
+			"cntFurniture": 1,
+			"cntLat": 1,
+			"rooms_name": "AERL_120",
+			"rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/AERL-120"
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+  "errorMsg": "OPTIONS missing COLUMNS",
+  "title": "Invalid OPTIONS",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 90
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "NOT": {
+            "GT": {
+              "courses_year": 2014
+            }
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "KKK": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

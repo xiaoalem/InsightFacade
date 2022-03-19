@@ -1,0 +1,97 @@
+{
+	"title": "no trasnformation",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 200
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_type",
+				"rooms_lon",
+				"rooms_lat"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_lon",
+					"rooms_lat"
+				]
+			}
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_shortname": "LSK",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25533,
+			"rooms_lat": 49.26545
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25364,
+			"rooms_lat": 49.26486
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.25165,
+			"rooms_lat": 49.2661
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_type": "TBD",
+			"rooms_lon": -123.24894,
+			"rooms_lat": 49.2683
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_type": "TBD",
+			"rooms_lon": -123.24894,
+			"rooms_lat": 49.2683
+		},
+		{
+			"rooms_shortname": "SRC",
+			"rooms_type": "TBD",
+			"rooms_lon": -123.24894,
+			"rooms_lat": 49.2683
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24494,
+			"rooms_lat": 49.26236
+		},
+		{
+			"rooms_shortname": "LSC",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24494,
+			"rooms_lat": 49.26236
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"rooms_type": "Open Design General Purpose",
+			"rooms_lon": -123.24467,
+			"rooms_lat": 49.26047
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"rooms_type": "Tiered Large Group",
+			"rooms_lon": -123.24342,
+			"rooms_lat": 49.26229
+		}
+	]
+}

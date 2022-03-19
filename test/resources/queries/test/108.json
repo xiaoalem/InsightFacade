@@ -1,0 +1,38 @@
+{
+  "errorMsg": "Asterisks (*) can only be the first or last characters of input strings",
+  "title": "IS with inputString = \"*a*b*\"",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_instructor": "*a*b*"
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_year": 2000
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_year",
+        "courses_id",
+        "courses_instructor"
+      ],
+      "ORDER": "courses_id"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

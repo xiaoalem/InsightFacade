@@ -1,0 +1,156 @@
+{
+  "title": "lat + lon",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_name": "*A"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "sumLon",
+        "avgLon",
+        "cntLon",
+        "maxLon",
+        "minLon",
+        "sumLat",
+        "avgLat",
+        "cntLat",
+        "maxLat",
+        "minLat",
+        "rooms_href"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_href"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_href"
+      ],
+      "APPLY": [
+        {
+          "sumLon": {
+            "SUM": "rooms_lon"
+          }
+        },
+        {
+          "avgLon": {
+            "AVG": "rooms_lon"
+          }
+        },
+        {
+          "cntLon": {
+            "COUNT": "rooms_lon"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "minLon": {
+            "MIN": "rooms_lon"
+          }
+        },
+        {
+          "sumLat": {
+            "SUM": "rooms_lat"
+          }
+        },
+        {
+          "avgLat": {
+            "AVG": "rooms_lat"
+          }
+        },
+        {
+          "maxLat": {
+            "MAX": "rooms_lat"
+          }
+        },
+        {
+          "minLat": {
+            "MIN": "rooms_lat"
+          }
+        },
+        {
+          "cntLat": {
+            "COUNT": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "sumLon": -123.25,
+      "avgLon": -123.25,
+      "cntLon": 1,
+      "maxLon": -123.24894,
+      "minLon": -123.24894,
+      "sumLat": 49.27,
+      "avgLat": 49.27,
+      "cntLat": 1,
+      "maxLat": 49.2683,
+      "minLat": 49.2683,
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SRC-220A"
+    },
+    {
+      "sumLon": -123.25,
+      "avgLon": -123.25,
+      "cntLon": 1,
+      "maxLon": -123.2531,
+      "minLon": -123.2531,
+      "sumLat": 49.26,
+      "avgLat": 49.26,
+      "cntLat": 1,
+      "maxLat": 49.26398,
+      "minLat": 49.26398,
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/SCRF-204A"
+    },
+    {
+      "sumLon": -123.24,
+      "avgLon": -123.24,
+      "cntLon": 1,
+      "maxLon": -123.24467,
+      "minLon": -123.24467,
+      "sumLat": 49.26,
+      "avgLat": 49.26,
+      "cntLat": 1,
+      "maxLat": 49.26047,
+      "minLat": 49.26047,
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-A"
+    },
+    {
+      "sumLon": -123.24,
+      "avgLon": -123.24,
+      "cntLon": 1,
+      "maxLon": -123.24467,
+      "minLon": -123.24467,
+      "sumLat": 49.26,
+      "avgLat": 49.26,
+      "cntLat": 1,
+      "maxLat": 49.26047,
+      "minLat": 49.26047,
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-203A"
+    },
+    {
+      "sumLon": -123.25,
+      "avgLon": -123.25,
+      "cntLon": 1,
+      "maxLon": -123.25027,
+      "minLon": -123.25027,
+      "sumLat": 49.26,
+      "avgLat": 49.26,
+      "cntLat": 1,
+      "maxLat": 49.26114,
+      "minLat": 49.26114,
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/MCML-360A"
+    }
+  ]
+}

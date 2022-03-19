@@ -1,0 +1,36 @@
+{
+  "errorMsg": "TRANSFORMATIONS missing APPLY",
+  "title": "TRANSFORMATIONS missing APPLY",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "Buchanan"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "minSeats",
+        "cntType",
+        "maxLon",
+        "avgLat",
+        "rooms_seats",
+        "rooms_fullname"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "minSeats",
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_fullname",
+        "rooms_seats"
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

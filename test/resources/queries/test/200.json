@@ -1,0 +1,41 @@
+{
+  "errorMsg": "Invalid keys in OPTIONS",
+  "title": "Invalid OPTIONS",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 90
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "NOT": {
+            "GT": {
+              "courses_year": 2014
+            }
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "MMM": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

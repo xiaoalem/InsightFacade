@@ -1,0 +1,29 @@
+{
+  "title": "ExtraKey",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 94
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "cpsc"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    },
+	  "EXTRA_KEY": {}
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

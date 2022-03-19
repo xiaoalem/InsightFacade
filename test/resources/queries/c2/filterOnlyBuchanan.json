@@ -1,0 +1,70 @@
+{
+  "title": "filter only Buchanan",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_fullname": "Buchanan"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "minSeats",
+        "cntType",
+        "maxLon",
+        "avgLat",
+        "sumSeats",
+        "rooms_fullname"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "minSeats",
+          "rooms_fullname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_fullname"
+      ],
+      "APPLY": [
+        {
+          "minSeats": {
+            "MIN": "rooms_seats"
+          }
+        },
+        {
+          "cntType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "avgLat": {
+            "AVG": "rooms_lat"
+          }
+        },
+        {
+          "sumSeats": {
+            "SUM": "rooms_seats"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "minSeats": 18,
+      "cntType": 4,
+      "maxLon": -123.25468,
+      "avgLat": 49.27,
+      "sumSeats": 3190,
+      "rooms_fullname": "Buchanan"
+    }
+  ]
+}

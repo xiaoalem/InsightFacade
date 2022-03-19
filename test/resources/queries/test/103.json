@@ -1,0 +1,37 @@
+{
+  "title": "IS with uuid = number",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_uuid": 1000
+              }
+            }
+          ]
+        },
+        {
+          "AND": [
+            {
+              "IS": {
+                "courses_uuid": 1000
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_uuid"
+      ],
+      "ORDER": "courses_pass"
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

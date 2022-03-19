@@ -1,0 +1,230 @@
+{
+	"title": "Should return true",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_year",
+				"dept",
+				"id",
+				"number",
+				"name",
+				"address",
+				"lat",
+				"lon",
+				"seats",
+				"type",
+				"furniture"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"courses_year"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"courses_year"
+			],
+			"APPLY": [
+				{
+					"dept": {
+						"COUNT": "courses_dept"
+					}
+				},
+				{
+					"id": {
+						"COUNT": "courses_id"
+					}
+				},
+				{
+					"number": {
+						"COUNT": "courses_avg"
+					}
+				},
+				{
+					"name": {
+						"COUNT": "courses_instructor"
+					}
+				},
+				{
+					"address": {
+						"COUNT": "courses_title"
+					}
+				},
+				{
+					"lat": {
+						"COUNT": "courses_pass"
+					}
+				},
+				{
+					"lon": {
+						"COUNT": "courses_fail"
+					}
+				},
+				{
+					"seats": {
+						"COUNT": "courses_audit"
+					}
+				},
+				{
+					"type": {
+						"COUNT": "courses_uuid"
+					}
+				},
+				{
+					"furniture": {
+						"COUNT": "courses_year"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"courses_year": 1900,
+			"dept": 189,
+			"id": 472,
+			"number": 3159,
+			"name": 1,
+			"address": 3794,
+			"lat": 889,
+			"lon": 171,
+			"seats": 22,
+			"type": 24621,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2007,
+			"dept": 101,
+			"id": 395,
+			"number": 1580,
+			"name": 1322,
+			"address": 1507,
+			"lat": 228,
+			"lon": 40,
+			"seats": 9,
+			"type": 2682,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2008,
+			"dept": 133,
+			"id": 406,
+			"number": 1738,
+			"name": 1,
+			"address": 1755,
+			"lat": 233,
+			"lon": 43,
+			"seats": 10,
+			"type": 3006,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2009,
+			"dept": 130,
+			"id": 425,
+			"number": 1962,
+			"name": 1860,
+			"address": 2048,
+			"lat": 264,
+			"lon": 49,
+			"seats": 8,
+			"type": 3950,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2010,
+			"dept": 145,
+			"id": 430,
+			"number": 2039,
+			"name": 2004,
+			"address": 2237,
+			"lat": 260,
+			"lon": 47,
+			"seats": 10,
+			"type": 4305,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2011,
+			"dept": 151,
+			"id": 434,
+			"number": 2058,
+			"name": 2035,
+			"address": 2340,
+			"lat": 265,
+			"lon": 45,
+			"seats": 10,
+			"type": 4484,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2012,
+			"dept": 153,
+			"id": 440,
+			"number": 2158,
+			"name": 2096,
+			"address": 2524,
+			"lat": 269,
+			"lon": 46,
+			"seats": 7,
+			"type": 4808,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2013,
+			"dept": 161,
+			"id": 442,
+			"number": 2164,
+			"name": 2179,
+			"address": 2685,
+			"lat": 278,
+			"lon": 47,
+			"seats": 8,
+			"type": 4990,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2014,
+			"dept": 169,
+			"id": 450,
+			"number": 2237,
+			"name": 2233,
+			"address": 2779,
+			"lat": 288,
+			"lon": 42,
+			"seats": 9,
+			"type": 5326,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2015,
+			"dept": 187,
+			"id": 464,
+			"number": 2233,
+			"name": 2311,
+			"address": 3226,
+			"lat": 285,
+			"lon": 49,
+			"seats": 10,
+			"type": 5475,
+			"furniture": 1
+		},
+		{
+			"courses_year": 2016,
+			"dept": 112,
+			"id": 278,
+			"number": 780,
+			"name": 589,
+			"address": 590,
+			"lat": 175,
+			"lon": 33,
+			"seats": 6,
+			"type": 965,
+			"furniture": 1
+		}
+	]
+}

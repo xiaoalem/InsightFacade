@@ -1,0 +1,46 @@
+{
+  "title": "ValidRoomOrCheck",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "GT": {
+            "rooms_seats": 450
+          }
+        },
+        {
+          "EQ": {
+            "rooms_seats": 187
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "rooms_type",
+        "rooms_lon",
+        "rooms_lat",
+        "rooms_seats"
+      ],
+      "ORDER": "rooms_lat"
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_shortname": "SWNG",
+      "rooms_type": "Tiered Large Group",
+      "rooms_lon": -123.25431,
+      "rooms_lat": 49.26293,
+      "rooms_seats": 187
+    },
+    {
+      "rooms_shortname": "WOOD",
+      "rooms_type": "Tiered Large Group",
+      "rooms_lon": -123.24673,
+      "rooms_lat": 49.26478,
+      "rooms_seats": 503
+    }
+  ]
+}

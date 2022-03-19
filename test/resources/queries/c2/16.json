@@ -1,0 +1,83 @@
+{
+	"title": "AND has multi objs",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_furniture": "*Tables*"
+					}
+				},
+				{
+					"EQ": {
+						"rooms_seats": 200
+					}
+				},
+				{
+					"EQ": {
+						"rooms_seats": 150
+					}
+				},
+				{
+					"EQ": {
+						"rooms_seats": 187
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"minSeats",
+				"cntType",
+				"maxLon",
+				"avgLat",
+				"sumSeats",
+				"rooms_fullname"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"minSeats",
+					"rooms_type",
+					"rooms_fullname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type",
+				"rooms_fullname"
+			],
+			"APPLY": [
+				{
+					"minSeats": {
+						"MIN": "rooms_seats"
+					}
+				},
+				{
+					"cntType": {
+						"COUNT": "rooms_type"
+					}
+				},
+				{
+					"maxLon": {
+						"MAX": "rooms_lon"
+					}
+				},
+				{
+					"avgLat": {
+						"AVG": "rooms_lat"
+					}
+				},
+				{
+					"sumSeats": {
+						"SUM": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "fieldConflict5",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 95
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "*cpsc*"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "with": []
+}

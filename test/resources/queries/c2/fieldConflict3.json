@@ -1,0 +1,45 @@
+{
+  "title": "fieldConflict3",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 94
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "cpsc"
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "courses_dept": "cpsc",
+      "courses_avg": 94.5
+    },
+    {
+      "courses_dept": "cpsc",
+      "courses_avg": 94.5
+    },
+    {
+      "courses_dept": "cpsc",
+      "courses_avg": 95
+    },
+    {
+      "courses_dept": "cpsc",
+      "courses_avg": 95
+    }
+  ]
+}

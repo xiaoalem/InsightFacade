@@ -1,0 +1,38 @@
+{
+  "errorMsg": "Duplicate APPLY key cntFN",
+  "title": "Duplicate APPLY key cntFN",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "cntFN",
+        "rooms_lon"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "rooms_lon"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_lon"
+      ],
+      "APPLY": [
+        {
+          "cntFN": {
+            "COUNT": "rooms_lon"
+          }
+        },
+        {
+          "cntFN": {
+            "AVG": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

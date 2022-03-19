@@ -1,0 +1,86 @@
+{
+  "title": "Invalid value type in IS, should be string",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_number": 110
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "cntSeats",
+        "cntType",
+        "cntLon",
+        "cntFullname",
+        "cntShortname",
+        "cntNumber",
+        "cntAdr",
+        "cntFurniture",
+        "cntLat",
+        "rooms_name",
+        "rooms_href"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_href"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_href",
+        "rooms_name"
+      ],
+      "APPLY": [
+        {
+          "cntSeats": {
+            "COUNT": "rooms_seats"
+          }
+        },
+        {
+          "cntType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "cntLon": {
+            "COUNT": "rooms_lon"
+          }
+        },
+        {
+          "cntNumber": {
+            "COUNT": "rooms_number"
+          }
+        },
+        {
+          "cntFullname": {
+            "COUNT": "rooms_fullname"
+          }
+        },
+        {
+          "cntShortname": {
+            "COUNT": "rooms_shortname"
+          }
+        },
+        {
+          "cntAdr": {
+            "COUNT": "rooms_address"
+          }
+        },
+        {
+          "cntFurniture": {
+            "COUNT": "rooms_furniture"
+          }
+        },
+        {
+          "cntLat": {
+            "COUNT": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,704 @@
+{
+  "title": "count all",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "fullname",
+        "shortname",
+        "number",
+        "name",
+        "address",
+        "lat",
+        "lon",
+        "seats",
+        "type",
+        "furniture",
+        "href"
+      ],
+      "ORDER": "rooms_shortname"
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_shortname"
+      ],
+      "APPLY": [
+        {
+          "fullname": {
+            "COUNT": "rooms_fullname"
+          }
+        },
+        {
+          "shortname": {
+            "COUNT": "rooms_shortname"
+          }
+        },
+        {
+          "number": {
+            "COUNT": "rooms_number"
+          }
+        },
+        {
+          "name": {
+            "COUNT": "rooms_name"
+          }
+        },
+        {
+          "address": {
+            "COUNT": "rooms_address"
+          }
+        },
+        {
+          "lat": {
+            "COUNT": "rooms_lat"
+          }
+        },
+        {
+          "lon": {
+            "COUNT": "rooms_lon"
+          }
+        },
+        {
+          "seats": {
+            "COUNT": "rooms_seats"
+          }
+        },
+        {
+          "type": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "furniture": {
+            "COUNT": "rooms_furniture"
+          }
+        },
+        {
+          "href": {
+            "COUNT": "rooms_href"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "with": [
+    {
+      "rooms_shortname": "AERL",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 1,
+      "name": 1,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 1
+    },
+    {
+      "rooms_shortname": "ALRD",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 5,
+      "name": 5,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 4,
+      "type": 2,
+      "furniture": 2,
+      "href": 5
+    },
+    {
+      "rooms_shortname": "ANGU",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 28,
+      "name": 28,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 15,
+      "type": 5,
+      "furniture": 2,
+      "href": 28
+    },
+    {
+      "rooms_shortname": "ANSO",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 4,
+      "name": 4,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 4,
+      "type": 2,
+      "furniture": 3,
+      "href": 4
+    },
+    {
+      "rooms_shortname": "AUDX",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 2,
+      "name": 2,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 1,
+      "furniture": 1,
+      "href": 2
+    },
+    {
+      "rooms_shortname": "BIOL",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 4,
+      "name": 4,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 2,
+      "furniture": 3,
+      "href": 4
+    },
+    {
+      "rooms_shortname": "BRKX",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 2,
+      "name": 2,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 2,
+      "furniture": 2,
+      "href": 2
+    },
+    {
+      "rooms_shortname": "BUCH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 61,
+      "name": 61,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 19,
+      "type": 4,
+      "furniture": 7,
+      "href": 61
+    },
+    {
+      "rooms_shortname": "CEME",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 6,
+      "type": 3,
+      "furniture": 3,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "CHBE",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 2,
+      "furniture": 2,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "CHEM",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 4,
+      "type": 1,
+      "furniture": 1,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "CIRS",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 1,
+      "name": 1,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 1
+    },
+    {
+      "rooms_shortname": "DMP",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 5,
+      "name": 5,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 4,
+      "type": 2,
+      "furniture": 2,
+      "href": 5
+    },
+    {
+      "rooms_shortname": "EOSM",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 1,
+      "name": 1,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 1
+    },
+    {
+      "rooms_shortname": "ESB",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 1,
+      "furniture": 3,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "FNH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 6,
+      "type": 3,
+      "furniture": 3,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "FORW",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 2,
+      "furniture": 2,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "FRDM",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 1,
+      "name": 1,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 1
+    },
+    {
+      "rooms_shortname": "FSC",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 10,
+      "name": 10,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 7,
+      "type": 3,
+      "furniture": 3,
+      "href": 10
+    },
+    {
+      "rooms_shortname": "GEOG",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 8,
+      "name": 8,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 7,
+      "type": 3,
+      "furniture": 4,
+      "href": 8
+    },
+    {
+      "rooms_shortname": "HEBB",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 4,
+      "name": 4,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 2,
+      "furniture": 2,
+      "href": 4
+    },
+    {
+      "rooms_shortname": "HENN",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 2,
+      "furniture": 2,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "IBLC",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 18,
+      "name": 18,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 10,
+      "type": 4,
+      "furniture": 5,
+      "href": 18
+    },
+    {
+      "rooms_shortname": "IONA",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 2,
+      "name": 2,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 2,
+      "furniture": 2,
+      "href": 2
+    },
+    {
+      "rooms_shortname": "LASR",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 4,
+      "furniture": 4,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "LSC",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 1,
+      "furniture": 1,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "LSK",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 4,
+      "name": 4,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 4,
+      "type": 2,
+      "furniture": 2,
+      "href": 4
+    },
+    {
+      "rooms_shortname": "MATH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 8,
+      "name": 8,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 3,
+      "furniture": 3,
+      "href": 8
+    },
+    {
+      "rooms_shortname": "MATX",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 1,
+      "name": 1,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 1
+    },
+    {
+      "rooms_shortname": "MCLD",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 3,
+      "furniture": 2,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "MCML",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 19,
+      "name": 19,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 8,
+      "type": 4,
+      "furniture": 4,
+      "href": 19
+    },
+    {
+      "rooms_shortname": "MGYM",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 2,
+      "name": 2,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 1,
+      "furniture": 1,
+      "href": 2
+    },
+    {
+      "rooms_shortname": "ORCH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 21,
+      "name": 21,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 3,
+      "furniture": 5,
+      "href": 21
+    },
+    {
+      "rooms_shortname": "OSBO",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 2,
+      "furniture": 2,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "PCOH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 8,
+      "name": 8,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 2,
+      "furniture": 3,
+      "href": 8
+    },
+    {
+      "rooms_shortname": "PHRM",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 11,
+      "name": 11,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 3,
+      "furniture": 2,
+      "href": 11
+    },
+    {
+      "rooms_shortname": "SCRF",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 22,
+      "name": 22,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 7,
+      "type": 2,
+      "furniture": 3,
+      "href": 22
+    },
+    {
+      "rooms_shortname": "SOWK",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 7,
+      "name": 7,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 2,
+      "furniture": 2,
+      "href": 7
+    },
+    {
+      "rooms_shortname": "SPPH",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 6,
+      "name": 6,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 6,
+      "type": 2,
+      "furniture": 2,
+      "href": 6
+    },
+    {
+      "rooms_shortname": "SRC",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 3,
+      "name": 3,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 1,
+      "type": 1,
+      "furniture": 1,
+      "href": 3
+    },
+    {
+      "rooms_shortname": "SWNG",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 22,
+      "name": 22,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 5,
+      "type": 3,
+      "furniture": 3,
+      "href": 22
+    },
+    {
+      "rooms_shortname": "UCLL",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 4,
+      "name": 4,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 3,
+      "type": 3,
+      "furniture": 3,
+      "href": 4
+    },
+    {
+      "rooms_shortname": "WESB",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 2,
+      "name": 2,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 2,
+      "type": 1,
+      "furniture": 1,
+      "href": 2
+    },
+    {
+      "rooms_shortname": "WOOD",
+      "fullname": 1,
+      "shortname": 1,
+      "number": 16,
+      "name": 16,
+      "address": 1,
+      "lat": 1,
+      "lon": 1,
+      "seats": 10,
+      "type": 2,
+      "furniture": 4,
+      "href": 16
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+	"title": "simple room query",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"rooms_shortname": "FSC"
+					}
+				},
+				{
+					"GT": {
+						"rooms_seats": 0
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"rooms_number"
+			],
+			"ORDER": "rooms_number"
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1001"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1002"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1003"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1005"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1221"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1402"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1611"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1613"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1615"
+		},
+		{
+			"rooms_shortname": "FSC",
+			"rooms_number": "1617"
+		}
+	]
+}

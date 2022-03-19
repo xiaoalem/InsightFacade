@@ -1,0 +1,37 @@
+{
+	"title": "IS with year = string",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"AND": [
+						{
+							"IS": {
+								"courses_year": "2018"
+							}
+						}
+					]
+				},
+				{
+					"AND": [
+						{
+							"IS": {
+								"courses_year": "2017"
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_uuid"
+			],
+			"ORDER": "courses_dept"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}
